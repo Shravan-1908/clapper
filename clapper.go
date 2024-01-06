@@ -158,6 +158,8 @@ func removeWhitespaces(value string) string {
 }
 
 /***********************************************/
+// VariadicSeparator is used to separate different values for a variadic argument. It is a zero-width space character.
+const VariadicSeparator = "\u200B"
 
 // ErrorUnknownCommand represents an error when command-line arguments contain an unregistered command.
 type ErrorUnknownCommand struct {
@@ -337,7 +339,7 @@ func (registry Registry) Parse(values []string) (*CommandConfig, error) {
 
 				// if last argument is a variadic argument, append values
 				if (index == len(commandConfig.ArgNames)-1) && arg.IsVariadic {
-					arg.Value += fmt.Sprintf(",%s", value)
+					arg.Value += fmt.Sprintf("%s%s", VariadicSeparator, value)
 				}
 			}
 		}
