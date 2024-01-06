@@ -1,4 +1,7 @@
 # clapper
+
+> This fork modifies the variadic argument separator (comma -> \u200B (zero width space)) to suit my particular requirements. 
+
 A simple but powerful Go package to parse command-line arguments [_getopt(3) style_](http://man7.org/linux/man-pages/man3/getopt.3.html). Designed especially for making CLI based libraries with ease. It has built-in support for sub-commands, long and short flag name combination (_for example `--version` <==> `-v`_), `--flag=<value>` syntax, inverted flag (_for example `--no-clean`_), variadic arguments, etc.
 
 > [**Commando**](https://github.com/thatisuday/commando) CLI application builder library uses this package to parse command-line arguments.

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/thatisuday/clapper"
+	"github.com/Shravan-1908/clapper"
 )
 
 func main() {
